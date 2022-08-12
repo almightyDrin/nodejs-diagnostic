@@ -13,7 +13,6 @@ const UsersServices = {
         console.log("creating user", payload)
         const [user, isCreated] =  await User.findOrCreate({ 
             where: {
-                username: payload.username,
                 email: payload.email,
                 phone: payload.phone
             },
